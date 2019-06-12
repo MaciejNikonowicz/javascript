@@ -58,6 +58,21 @@ re = /h*llo/i;      // matches any character 0 or more times, wildcard
 re = /gre?a?y/i;     // ? next to character makes it optional
 re = /gre?a?y\?/i;   // escape character
 
+
+// Brackets [] - Character sets
+re = /gr[ae]y/i;        // must be one of characters in set - a or e
+re = /[GF]ray/;         // must be a G or F
+re = /[^GF]ray/;        // match anything except a G or F (negation)
+re = /[A-Z]ray/;        // match any uppercase letter
+re = /[a-z]ray/;        // match any lowercase letter
+re = /[A-Za-z]ray/;     // match any letter of any case
+re = /[0-9]ray/;        // match any digit
+
+
+// Braces {} - Quantifiers
+re = /Hel{2}o/i;        // look for character before braces, for a specific number of occurances, specified inside
+
+
 // String to match
 const str = 'Hello World';
 
